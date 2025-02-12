@@ -31,3 +31,38 @@ Ensure you have the following installed:
 ```sh
 git clone https://github.com/your-username/cloud3.git
 cd cloud3
+```
+### **3️⃣ Install Dependencies**  
+```sh
+yarn install  # or npm install
+```
+### **4️⃣ Set Up Environment Variables**  
+```sh
+NEXT_PUBLIC_INFURA_URL=https://mainnet.infura.io/v3/YOUR_PROJECT_ID
+NEXT_PUBLIC_FIREBASE_API_KEY=YOUR_FIREBASE_API_KEY
+NEXT_PUBLIC_BLOCKCHAIN_NODE_ENGINE_URL=YOUR_GCP_NODE_ENGINE_RPC
+```
+### **5️⃣ Run the Development Server**  
+```sh
+yarn dev  # or npm run dev
+```
+### **6️⃣ Deploy Backend (Google Cloud Functions)**  
+```sh
+gcloud functions deploy api --runtime nodejs20 --trigger-http
+```
+
+## 🎯 Roadmap  
+- [ ] Add support for Solana & Polygon  
+- [ ] Implement NFT minting feature  
+- [ ] Enable multi-signature transactions  
+
+## 🛡️ Security & Best Practices  
+- All **private keys and secrets** should be stored in **Google Cloud Secret Manager**.  
+- Always use **environment variables** for API keys.  
+
+## 🤝 Contributing  
+Pull requests are welcome! Feel free to **open an issue** if you have suggestions.  
+
+## 📜 License  
+This project is **MIT licensed**.  
+
